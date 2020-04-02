@@ -1,0 +1,88 @@
+package application;
+
+import java.util.Scanner;
+public class Main extends Java implements Finish{
+	 String help;
+	 public String gethelp() {
+	 	return help;
+	 }
+
+	 public void setName(String help) {
+	 	this.help=help;
+	 }
+	 
+	 
+	 
+	 
+	 
+	
+	static int count =6;
+	static void counts() {
+		count--;
+		if(count>=1) {
+			
+			System.out.println(count);
+			counts();
+		}	
+	}
+	
+	
+public void printresults() {
+	System.out.println(super.response1);
+	
+}
+
+	public static void main(String[] args) {
+		Main r = new Main();
+		r.setName("If you scored higher than 10: Seek Help");
+		
+		
+		
+		char names = 'A';
+		String a,b;
+		a = "1";
+		
+		a = "10";
+		
+		switch(names) {
+		case'A' :
+			b = (a=="10") ? "Sam Dicken": "Donovan Reede";
+			System.out.print("Project Done by: \n" +b+ " and ");
+			b = (a=="1") ? "Sam Dicken" : "Donovan Reede";          
+			System.out.println(b);
+			break;
+		}
+		
+		System.out.println(date.toString());
+		Scanner input = new Scanner(System.in);
+		System.out.println("\n Hello! Welcome to your Virtual Therapy Session. \n Answer a few questions below so we can begin your session.\n Once you have finished this survey you will be directed to our therapy session.\n Once finished with the therapy session you will be directed back here for your results!");
+		System.out.println("What is your name: ");
+		final String name = input.next();
+		System.out.println("How old are you " + name + "?");
+		final int age = input.nextInt();
+
+
+		System.out.println("What grade are you in " + name + "? (1-12)"); 
+		int year = input.nextInt();
+		int scale = (int)Math.pow(1, 1); 
+		year= Math.round(year*scale)/scale;
+		
+		if (year > 1.0 || year < 12.0)
+		{
+			while (year>12.0|| year < 1.0)
+			{
+				System.out.println("Please enter a year between 1-12 :");
+				 year = input.nextInt();
+			}
+		
+			System.out.println("Your session will begin in: ");
+			counts();
+			}
+		Main ok=new Main();
+		ok.printresults();
+		System.out.println(r.gethelp());
+			
+		launch(args);
+	}
+	
+}
