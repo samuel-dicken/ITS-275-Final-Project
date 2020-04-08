@@ -1,8 +1,0 @@
-package application;
-import java.util.Date;
-
-public interface Finish{
-	
-Date date = new Date();
-
-	}
